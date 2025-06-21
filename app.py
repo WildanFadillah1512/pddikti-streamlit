@@ -1,122 +1,120 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, ConfusionMatrixDisplay
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-# Pengaturan halaman
-st.set_page_config(page_title="Prediksi PDDIKTI", layout="wide")
+# Judul
 st.title("🎓 Prediksi & Analisis Program Studi PDDIKTI")
-
-# Sidebar untuk navigasi
-st.sidebar.title("Navigasi")
-page = st.sidebar.radio("Pilih Halaman", ["📊 Dataset & Visualisasi", "🔍 Clustering", "🧠 Prediksi Akreditasi"])
 
 # Load dan bersihkan data
 df = pd.read_csv("dataset_pddikti_bersih.csv")
 df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
 
-# Fitur dan target
+# Sidebar
+st.sidebar.header("Navigasi")
+page = st.sidebar.selectbox("Pilih Halaman", ["📊 Dataset & Visualisasi", "🔍 Clustering", "🧠 Prediksi Akreditasi"])
+
+# Fitur dan Target
 features = ['jumlah_semester', 'jumlah_mk', 'jumlah_sks', 'total_sks', 'mahasiswa_aktif']
 target = 'akreditasi'
 
-# ---------------------- Halaman 1 -------------------------
+# Cek validitas kolom
+if not all(col in df.columns for col in features + [target]):
+    st.error("❌ Kolom penting tidak ditemukan dalam dataset.")
+    st.stop()
+
+# Encode target
+le = LabelEncoder()
+df[target] = le.fit_transform(df[target])
+
+# Standarisasi
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(df[features])
+
+# ==========================
+# Halaman 1: Dataset & Visualisasi
+# ==========================
 if page == "📊 Dataset & Visualisasi":
     st.subheader("📋 Dataset PDDIKTI")
     st.dataframe(df)
 
     st.subheader("📌 Distribusi Akreditasi")
-    fig, ax = plt.subplots()
-    sns.countplot(data=df, x="akreditasi", order=df["akreditasi"].value_counts().index, ax=ax)
-    plt.xticks(rotation=45)
-    st.pyplot(fig)
+    fig1, ax1 = plt.subplots()
+    df['akreditasi'].value_counts().plot(kind='bar', ax=ax1)
+    ax1.set_xlabel("Akreditasi (Encoded)")
+    ax1.set_ylabel("Jumlah")
+    st.pyplot(fig1)
 
-    st.subheader("📈 Korelasi Fitur")
+    st.subheader("📈 Korelasi Antar Fitur")
     fig2, ax2 = plt.subplots()
-    sns.heatmap(df[features].corr(), annot=True, cmap="coolwarm", ax=ax2)
+    sns.heatmap(df[features + [target]].corr(), annot=True, cmap='coolwarm', ax=ax2)
     st.pyplot(fig2)
 
-# ---------------------- Halaman 2 -------------------------
+# ==========================
+# Halaman 2: Clustering
+# ==========================
 elif page == "🔍 Clustering":
-    st.subheader("🔍 Clustering Program Studi (KMeans)")
+    st.subheader("🔎 Clustering KMeans")
+    k = st.slider("Pilih jumlah klaster", 2, 10, 3)
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    clusters = kmeans.fit_predict(X_scaled)
 
-    df_cluster = df.copy()
-    df_cluster_encoded = df_cluster[features].dropna()
-
-    scaler = StandardScaler()
-    scaled_data = scaler.fit_transform(df_cluster_encoded)
-
-    kmeans = KMeans(n_clusters=3, random_state=42)
-    clusters = kmeans.fit_predict(scaled_data)
-    df_cluster["cluster"] = clusters
-
+    # PCA untuk reduksi dimensi ke 2D
     pca = PCA(n_components=2)
-    reduced = pca.fit_transform(scaled_data)
-    df_cluster["PC1"] = reduced[:, 0]
-    df_cluster["PC2"] = reduced[:, 1]
+    X_pca = pca.fit_transform(X_scaled)
+    df['cluster'] = clusters
 
     fig3, ax3 = plt.subplots()
-    sns.scatterplot(data=df_cluster, x="PC1", y="PC2", hue="cluster", palette="Set2", ax=ax3)
+    scatter = ax3.scatter(X_pca[:, 0], X_pca[:, 1], c=clusters, cmap='viridis')
+    ax3.set_title("Visualisasi Clustering (PCA)")
     st.pyplot(fig3)
 
-# ---------------------- Halaman 3 -------------------------
+    st.write("Jumlah data per klaster:")
+    st.write(df['cluster'].value_counts())
+
+# ==========================
+# Halaman 3: Prediksi Akreditasi
+# ==========================
 elif page == "🧠 Prediksi Akreditasi":
-    st.subheader("📝 Coba Prediksi Akreditasi Program Studi")
+    st.subheader("📌 Prediksi Akreditasi Program Studi")
 
-    if all(col in df.columns for col in features + [target]):
-        # Encode target
-        le = LabelEncoder()
-        df[target] = le.fit_transform(df[target])
+    # Split data
+    X = df[features]
+    y = df[target]
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Ambil data
-        X = df[features]
-        y = df[target]
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X_train, y_train)
 
-        # Split data
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    # Evaluasi
+    y_pred = model.predict(X_test)
+    report = classification_report(y_test, y_pred, output_dict=True)
 
-        # Standarisasi
-        scaler = StandardScaler()
-        X_train_scaled = scaler.fit_transform(X_train)
-        X_test_scaled = scaler.transform(X_test)
+    st.write("📊 Evaluasi Model:")
+    st.dataframe(pd.DataFrame(report).transpose())
 
-        # Model
-        model = RandomForestClassifier(n_estimators=100, random_state=42)
-        model.fit(X_train_scaled, y_train)
+    st.subheader("🧩 Confusion Matrix")
+    fig4, ax4 = plt.subplots()
+    ConfusionMatrixDisplay.from_estimator(model, X_test, y_test, ax=ax4)
+    st.pyplot(fig4)
 
-        # Evaluasi
-        y_pred = model.predict(X_test_scaled)
-        report = classification_report(y_test, y_pred, output_dict=True)
+    # Input user
+    st.subheader("📝 Coba Prediksi Sendiri")
 
-        st.write("📊 Evaluasi Model Random Forest")
-        st.dataframe(pd.DataFrame(report).transpose())
+    user_input = {}
+    for feature in features:
+        val = st.number_input(f"Masukkan nilai untuk {feature}", value=float(df[feature].mean()))
+        user_input[feature] = val
 
-        fig_cm, ax_cm = plt.subplots()
-        ConfusionMatrixDisplay.from_estimator(model, X_test_scaled, y_test, ax=ax_cm)
-        st.pyplot(fig_cm)
-
-        # Input user
-        st.markdown("### 🔧 Masukkan Data untuk Prediksi")
-        user_input = {}
-        for feature in features:
-            user_input[feature] = st.number_input(
-                f"Masukkan nilai untuk {feature}",
-                value=float(df[feature].mean())
-            )
-
-        if st.button("Prediksi Akreditasi"):
-            input_df = pd.DataFrame([user_input])
-            input_scaled = scaler.transform(input_df)
-            pred = model.predict(input_scaled)[0]
-            pred_label = le.inverse_transform([pred])[0]
-            st.success(f"✅ Prediksi Akreditasi: **{pred_label}**")
-
-    else:
-        st.error("🚫 Kolom yang dibutuhkan tidak tersedia dalam dataset.")
+    if st.button("Prediksi Akreditasi"):
+        input_df = pd.DataFrame([user_input])
+        pred = model.predict(input_df)[0]
+        pred_label = le.inverse_transform([pred])[0]
+        st.success(f"✅ Prediksi Akreditasi: **{pred_label}**")
