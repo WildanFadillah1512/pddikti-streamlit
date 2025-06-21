@@ -1,0 +1,247 @@
+kode_prodi,nama_prodi,status_prodi,jenjang,akreditasi,jumlah_semester,jumlah_mk,jumlah_sks,total_sks,mahasiswa_aktif,lama_studi_menit,akreditasi_encoded
+94409,Administrasi Asuransi & Aktuaria,Aktif,D3,Unggul,6,5,0,5,236,99.33,5
+61406,Administrasi Keuangan Dan Perbankan,Aktif,D3,A,14,4,1,5,268,79.14,0
+63411,Administrasi Perkantoran,Aktif,D3,A,12,4,2,6,273,82.75,0
+63421,Administrasi Perpajakan,Aktif,D3,A,6,5,0,5,280,106.67,0
+13461,Administrasi Rumah Sakit,Aktif,D3,Unggul,7,6,1,7,276,99.43,5
+62201,Akuntansi,Aktif,S1,Unggul,66,41,1,42,1154,77.48,5
+62401,Akuntansi,Aktif,D3,Unggul,10,5,0,5,259,85.9,5
+11744,Akupunktur Medik,Aktif,Sp-1,Unggul,21,2,0,2,64,63.05,5
+11807,Anestesiologi dan Terapi Intensif,Aktif,Sp-2,A,18,1,7,8,69,63.83,0
+11751,Anestesiologi dan Terapi Intensif,Aktif,Sp-1,Unggul,22,1,10,11,140,66.36,5
+82201,Antropologi Sosial,Aktif,S1,Unggul,17,5,0,5,245,74.41,5
+81001,Arkeologi,Aktif,S3,B,3,4,0,4,16,65.33,1
+81101,Arkeologi,Aktif,S2,A,10,4,0,4,24,62.4,0
+81201,Arkeologi,Aktif,S1,A,15,5,0,5,281,78.73,0
+23201,Arsitektur,Aktif,S1,Unggul,31,6,0,6,453,74.61,5
+23101,Arsitektur,Aktif,S2,Unggul,10,4,1,5,65,66.5,5
+90221,Arsitektur Interior,Aktif,S1,Unggul,12,5,0,5,245,80.42,5
+96101,Asia Tenggara,Aktif,S2,Baik Sekali,13,5,0,5,12,60.92,3
+96102,Asia Timur,Aktif,S2,Baik Sekali,8,5,0,5,7,60.88,3
+79210,Bahasa Dan Kebudayaan Korea,Aktif,S1,Unggul,6,6,0,6,176,89.33,5
+11758,"Bedah Toraks, Kardiak dan Vaskular",Aktif,Sp-1,Unggul,46,2,7,9,104,62.26,5
+46001,Biologi,Aktif,S3,Unggul,30,5,1,6,57,61.9,5
+46201,Biologi,Aktif,S1,Unggul,33,17,0,17,457,73.85,5
+60203,Bisnis Islam,Aktif,S1,Unggul,30,12,0,12,202,66.73,5
+93313,Bisnis Kreatif,Aktif,D4,Baik Sekali,15,3,3,6,383,85.53,3
+11700,Dermatologi dan Venereologi,Aktif,Sp-1,Unggul,36,5,7,12,81,62.25,5
+60202,Ekonomi Islam,Aktif,S1,Unggul,19,8,0,8,201,70.58,5
+13121,Epidemiologi,Aktif,S2,Unggul,14,4,2,6,93,66.64,5
+13021,Epidemiologi,Aktif,S3,Unggul,2,4,1,5,51,85.5,5
+11726,Farmakologi Klinik,Aktif,Sp-1,Unggul,32,4,2,6,16,60.5,5
+48201,Farmasi,Aktif,S1,Unggul,43,20,0,20,535,72.44,5
+45001,Fisika,Aktif,S3,Baik,11,7,0,7,41,63.73,2
+45201,Fisika,Aktif,S1,Unggul,41,6,0,6,470,71.46000000000001,5
+45103,Fisika Medis,Aktif,S2,Unggul,7,5,0,5,72,70.28999999999999,5
+45103,Fisika Medis,Aktif,S2,Baik,7,5,0,5,72,70.28999999999999,2
+11301,Fisioterapi,Aktif,D4,Baik,9,5,1,6,383,102.56,2
+33201,Geofisika,Aktif,S1,Baik Sekali,11,6,1,7,308,88.0,3
+51201,Geografi,Aktif,S1,Unggul,27,11,1,12,536,79.85,5
+51101,Geografi,Aktif,S2,Unggul,17,5,0,5,42,62.47,5
+34201,Geologi,Aktif,S1,Baik Sekali,11,7,1,8,312,88.36,3
+13211,Gizi,Aktif,S1,Unggul,10,8,0,8,227,82.7,5
+48104,Herbal,Aktif,S2,Unggul,8,5,0,5,17,62.13,5
+70401,Hubungan Masyarakat,Aktif,D3,Unggul,10,4,1,5,287,88.7,5
+63001,Ilmu Administrasi,Aktif,S3,Unggul,26,6,1,7,92,63.54,5
+63101,Ilmu Administrasi,Aktif,S2,Unggul,36,13,2,15,369,70.25,5
+63221,Ilmu Administrasi Fiskal,Aktif,S1,Unggul,27,13,1,14,635,83.52,5
+63201,Ilmu Administrasi Negara,Aktif,S1,Unggul,28,18,2,20,656,83.43,5
+63211,Ilmu Administrasi Niaga,Aktif,S1,Unggul,25,11,1,12,606,84.24,5
+94203,Ilmu Aktuaria,Aktif,S1,Unggul,19,8,0,8,248,73.05,5
+62101,Ilmu Akuntansi,Aktif,S2,Unggul,32,5,0,5,79,62.47,5
+62001,Ilmu Akuntansi,Aktif,S3,Unggul,12,5,0,5,39,63.25,5
+82001,Ilmu Antropologi,Aktif,S3,Baik Sekali,11,3,2,5,24,62.18,3
+82101,Ilmu Antropologi,Aktif,S2,Unggul,11,6,0,6,36,63.27,5
+28001,Ilmu Bahan-bahan,Aktif,S3,Unggul,8,5,0,5,29,63.63,5
+11732,Ilmu Bedah,Aktif,Sp-2,Unggul,87,1,7,8,63,60.72,5
+11707,Ilmu Bedah,Aktif,Sp-1,Unggul,96,4,11,15,102,61.06,5
+12701,Ilmu Bedah Mulut,Aktif,Sp-1,Unggul,40,4,1,5,57,61.43,5
+11757,Ilmu Bedah Plastik Rekonstruksi dan Estetik,Aktif,Sp-1,Unggul,83,2,5,7,52,60.63,5
+11729,Ilmu Bedah Saraf,Aktif,Sp-1,Unggul,18,5,4,9,46,62.56,5
+11002,Ilmu Biomedik,Aktif,S3,Unggul,49,9,1,10,91,61.86,5
+11101,Ilmu Biomedik,Aktif,S2,Unggul,139,24,2,26,165,61.19,5
+60201,Ilmu Ekonomi,Aktif,S1,Unggul,102,31,1,32,696,66.82,5
+60001,Ilmu Ekonomi,Aktif,S3,Unggul,16,6,2,8,36,62.25,5
+60101,Ilmu Ekonomi,Aktif,S2,Unggul,17,11,1,12,72,64.24,5
+48001,Ilmu Farmasi,Aktif,S3,Unggul,18,5,1,6,49,62.72,5
+75201,Ilmu Filsafat,Aktif,S1,Unggul,14,7,0,7,261,78.64,5
+75001,Ilmu Filsafat,Aktif,S3,Baik,7,5,0,5,18,62.57,2
+75101,Ilmu Filsafat,Aktif,S2,Unggul,9,7,0,7,22,62.44,5
+13111,Ilmu Gizi,Aktif,S2,Unggul,31,9,0,9,49,61.58,5
+13701,Ilmu Gizi Klinik,Aktif,Sp-1,Unggul,49,5,1,6,88,61.8,5
+64201,Ilmu Hubungan Internasional,Aktif,S1,A,16,6,0,6,241,75.06,0
+74001,Ilmu Hukum,Aktif,S3,Unggul,16,5,0,5,119,67.44,5
+74201,Ilmu Hukum,Aktif,S1,Unggul,106,81,2,83,1947,78.37,5
+74101,Ilmu Hukum,Aktif,S2,Unggul,72,14,1,15,1069,74.85,5
+11001,Ilmu Kedokteran,Aktif,S3,Unggul,131,4,5,9,182,61.39,5
+11721,Ilmu Kedokteran Fisik dan Rehabilitasi,Aktif,Sp-1,Unggul,58,3,3,6,88,61.52,5
+12001,Ilmu Kedokteran Gigi,Aktif,S3,Unggul,32,4,2,6,46,61.44,5
+12102,Ilmu Kedokteran Gigi Dasar,Aktif,S2,Unggul,10,4,2,6,7,60.7,5
+12103,Ilmu Kedokteran Gigi Komunitas,Aktif,S2,Unggul,10,5,1,6,7,60.7,5
+11722,Ilmu Kedokteran Olahraga,Aktif,Sp-1,Unggul,7,4,1,5,43,66.14,5
+48101,Ilmu Kefarmasian,Aktif,S2,Unggul,39,7,2,9,100,62.56,5
+54141,Ilmu Kelautan,Aktif,S2,Unggul,8,5,0,5,12,61.5,5
+14001,Ilmu Keperawatan,Aktif,S3,Unggul,67,4,1,5,138,62.06,5
+14101,Ilmu Keperawatan,Aktif,S2,Unggul,70,9,2,11,272,63.89,5
+11733,Ilmu Kesehatan Anak,Aktif,Sp-2,A,59,1,7,8,87,61.47,0
+11711,Ilmu Kesehatan Anak,Aktif,Sp-1,Unggul,70,11,17,28,179,62.56,5
+12704,Ilmu Kesehatan Gigi Anak,Aktif,Sp-1,Unggul,8,4,1,5,30,63.75,5
+13101,Ilmu Kesehatan Masyarakat,Aktif,S2,Unggul,59,18,0,18,363,66.15,5
+13001,Ilmu Kesehatan Masyarakat,Aktif,S3,Unggul,27,4,3,7,154,65.7,5
+11701,Ilmu Kesehatan Mata,Aktif,Sp-1,Unggul,33,5,3,8,71,62.15,5
+12708,"Ilmu Kesehatan Telinga Hidung Tenggorok, Bedah Kepala Leher",Aktif,Sp-1,Unggul,46,3,11,14,77,61.67,5
+72101,Ilmu Kesejahteraan Sosial,Aktif,S2,Unggul,14,6,0,6,134,69.57,5
+72001,Ilmu Kesejahteraan Sosial,Aktif,S3,A,7,5,0,5,26,63.71,0
+72201,Ilmu Kesejahteraan Sosial,Aktif,S1,Unggul,19,9,0,9,326,77.16,5
+47101,Ilmu Kimia,Aktif,S2,Unggul,18,6,0,6,62,63.44,5
+47001,Ilmu Kimia,Aktif,S3,Unggul,7,5,0,5,40,65.71,5
+55201,Ilmu Komputer,Aktif,S1,Unggul,34,14,1,15,876,85.76,5
+55001,Ilmu Komputer,Aktif,S3,Unggul,33,5,1,6,78,62.36,5
+57101,Ilmu Komputer,Aktif,S2,Unggul,28,7,1,8,102,63.64,5
+70101,Ilmu Komunikasi,Aktif,S2,A,17,7,0,7,245,74.41,0
+12703,Ilmu Konservasi Gigi,Aktif,Sp-1,Unggul,24,6,0,6,54,62.25,5
+95129,Ilmu Lingkungan,Aktif,S2,Unggul,28,6,1,7,189,66.75,5
+95029,Ilmu Lingkungan,Aktif,S3,Unggul,28,3,3,6,118,64.21,5
+79002,Ilmu Linguistik,Aktif,S3,A,9,5,0,5,40,64.44,0
+79102,Ilmu Linguistik,Aktif,S2,Unggul,21,6,0,6,84,64.0,5
+61001,Ilmu Manajemen,Aktif,S3,Unggul,40,5,3,8,102,62.55,5
+61101,Ilmu Manajemen,Aktif,S2,Unggul,43,11,0,11,237,65.51,5
+11802,Ilmu Penyakit Dalam,Aktif,Sp-2,A,133,3,23,26,158,61.19,0
+11702,Ilmu Penyakit Dalam,Aktif,Sp-1,Unggul,101,9,34,43,283,62.8,5
+11749,Ilmu Penyakit Jantung dan Pembuluh Darah,Aktif,Sp-1,Unggul,37,3,14,17,125,63.38,5
+12702,Ilmu Penyakit Mulut,Aktif,Sp-1,Unggul,9,5,1,6,11,61.22,5
+71101,Ilmu Perpustakaan,Aktif,S2,Unggul,9,6,2,8,42,64.67,5
+71201,Ilmu Perpustakaan,Aktif,S1,Unggul,14,5,0,5,269,79.21000000000001,5
+67201,Ilmu Politik,Aktif,S1,Unggul,33,13,0,13,325,69.85,5
+67001,Ilmu Politik,Aktif,S3,Unggul,7,5,1,6,49,67.0,5
+67101,Ilmu Politik,Aktif,S2,A,12,5,0,5,89,67.42,0
+73001,Ilmu Psikologi,Aktif,S3,A,22,5,0,5,49,62.23,0
+80201,Ilmu Sejarah,Aktif,S1,Unggul,11,5,0,5,286,86.0,5
+80101,Ilmu Sejarah,Aktif,S2,Unggul,12,5,0,5,28,62.33,5
+80001,Ilmu Sejarah,Aktif,S3,Unggul,8,4,0,4,33,64.13,5
+69001,Ilmu Sosiologi,Aktif,S3,Unggul,11,5,0,5,29,62.64,5
+79101,Ilmu Susastra,Aktif,S2,Unggul,26,6,0,6,65,62.5,5
+79001,Ilmu Susastra,Aktif,S3,Unggul,20,5,0,5,57,62.85,5
+60134,Industri Kreatif,Aktif,S2 Terapan,Terakreditasi Sementara,12,5,0,5,26,62.17,4
+13161,Kajian Administrasi Rumah Sakit,Aktif,S2,Unggul,15,5,3,8,165,71.0,5
+95126,Kajian Gender,Aktif,S2,Unggul,16,4,0,4,44,62.75,5
+95120,Kajian Ilmu Kepolisian,Aktif,S2,A,32,3,3,6,93,62.91,0
+95020,Kajian Informasi,Aktif,S3,Terakreditasi Sementara,12,5,0,5,14,61.17,4
+95128,Kajian Ketahanan Nasional,Aktif,S2,Unggul,49,5,0,5,176,63.59,5
+95125,Kajian Pengembangan Perkotaan,Aktif,S2,Unggul,15,5,1,6,34,62.27,5
+62701,Kajian Stratejik dan Global,Aktif,S3,Baik Sekali,45,4,1,5,140,63.11,3
+95165,Kajian Terorisme,Aktif,S2,Baik Sekali,18,5,1,6,31,61.72,3
+95121,Kajian Wilayah Amerika,Aktif,S2,A,2,1,6,7,9,64.5,0
+95123,Kajian Wilayah Eropa,Aktif,S2,Unggul,17,3,1,4,30,61.76,5
+95122,Kajian Wilayah Jepang,Aktif,S2,A,23,3,2,5,16,60.7,0
+95124,Kajian Wilayah Timur Tengah Islam,Aktif,S2,A,21,3,2,5,108,65.14,0
+63104,Kebijakan Publik dan Governansi,Aktif,S2,Baik,15,4,0,4,55,63.67,2
+11753,Kedokteran Forensik dan Studi Medikolegal,Aktif,Sp-1,Unggul,15,6,0,6,15,61.0,5
+11810,Kedokteran Jiwa Sp II,Aktif,Sp-2,Unggul,11,1,3,4,16,61.45,5
+11730,Kedokteran Keluarga Layanan Primer,Aktif,Sp-1,Baik,39,5,0,5,33,60.85,2
+11108,Kedokteran Kerja,Aktif,S2,Unggul,47,5,1,6,97,62.06,5
+11727,Kedokteran Okupasi,Aktif,Sp-1,Unggul,23,5,1,6,77,63.35,5
+11739,Kedokteran Penerbangan,Aktif,Sp-1,Unggul,14,3,1,4,17,61.21,5
+74102,Kenotariatan,Aktif,S2,Unggul,38,11,0,11,447,71.76,5
+13251,Kesehatan Lingkungan,Aktif,S1,Unggul,11,6,1,7,227,80.64,5
+13201,Kesehatan Masyarakat,Aktif,S1,Unggul,84,21,3,24,722,68.6,5
+13241,Keselamatan dan Kesehatan Kerja,Aktif,S1,Unggul,15,6,1,7,226,75.07,5
+13141,Keselamatan dan Kesehatan Kerja,Aktif,S2,Unggul,12,6,2,8,162,73.5,5
+66001,Kriminologi,Aktif,S3,A,8,3,2,5,23,62.88,0
+66201,Kriminologi,Aktif,S1,Unggul,27,6,0,6,307,71.37,5
+66101,Kriminologi,Aktif,S2,Baik Sekali,9,6,0,6,49,65.44,3
+62103,Magister Akuntansi,Aktif,S2,Unggul,47,9,1,10,300,66.38,5
+61102,Magister Manajemen,Aktif,S2,Unggul,63,24,1,25,420,66.67,5
+63105,Magister Perencanaan Ekonomi dan Kebijakan Pembangunan,Aktif,S2,A,49,19,0,19,357,67.29,0
+61201,Manajemen,Aktif,S1,Unggul,91,40,1,41,1272,73.98,5
+22106,Manajemen Bencana,Aktif,S2,Baik,18,1,4,5,47,62.61,2
+93310,Manajemen Bisnis Pariwisata,Aktif,D4,Baik,18,3,2,5,414,83.0,2
+28102,Manajemen Integritas Material,Aktif,S2,Baik,14,6,0,6,30,62.14,2
+71302,Manajemen Rekod dan Arsip,Aktif,D4,Baik,7,5,1,6,409,118.43,2
+44101,Matematika,Aktif,S2,Unggul,25,6,0,6,53,62.12,5
+44201,Matematika,Aktif,S1,Unggul,39,11,1,12,339,68.69,5
+11725,Mikrobiologi Klinik,Aktif,Sp-1,Unggul,36,11,1,12,41,61.14,5
+11741,Ners Spesialis Keperawatan Anak,Aktif,Sp-1,Unggul,8,5,0,5,24,63.0,5
+11742,Ners Spesialis Keperawatan Jiwa,Aktif,Sp-1,Unggul,6,5,1,6,19,63.17,5
+11746,Ners Spesialis Keperawatan Komunitas,Aktif,Sp-1,Unggul,7,5,0,5,17,62.43,5
+11745,Ners Spesialis Keperawatan Maternitas,Aktif,Sp-1,Unggul,4,5,0,5,11,62.75,5
+11740,Ners Spesialis Keperawatan Medikal Bedah,Aktif,Sp-1,Unggul,16,5,0,5,72,64.5,5
+11748,Ners Spesialis Keperawatan Onkologi,Aktif,Sp-1,Unggul,9,4,1,5,44,64.89,5
+11703,Neurologi,Aktif,Sp-1,Unggul,39,7,6,13,81,62.08,5
+11816,Obstetri dan Ginekologi,Aktif,Sp-2,A,35,3,6,9,61,61.74,0
+11716,Obstetri dan Ginekologi,Aktif,Sp-1,Unggul,47,8,16,24,145,63.09,5
+11747,Odontologi Forensik,Aktif,Sp-1,Baik Sekali,6,2,3,5,11,61.83,3
+11738,Onkologi Radiasi,Aktif,Sp-1,Unggul,26,2,5,7,72,62.77,5
+11736,Orthopaedi dan Traumatologi,Aktif,Sp-2,Baik,20,3,3,6,48,62.4,2
+11756,Orthopaedi dan Traumatologi,Aktif,Sp-1,Unggul,41,2,5,7,70,61.71,5
+12706,Ortodonsia,Aktif,Sp-1,Unggul,14,6,0,6,47,63.36,5
+11743,Parasitologi Klinik,Aktif,Sp-1,Unggul,22,5,0,5,10,60.45,5
+11718,Patologi Anatomi,Aktif,Sp-1,Unggul,29,5,1,6,37,61.28,5
+11719,Patologi Klinik,Aktif,Sp-1,Unggul,18,5,4,9,56,63.11,5
+11201,Pendidikan Dokter,Aktif,S1,A,327,49,32,81,861,62.63,0
+12201,Pendidikan Dokter Gigi,Aktif,S1,Unggul,98,22,1,23,474,64.84,5
+11109,Pendidikan Kedokteran,Aktif,S2,Unggul,11,4,1,5,23,62.09,5
+23902,Pendidikan Profesi Insinyur,Aktif,Profesi,B,5,6,0,6,95,79.0,1
+73901,Pendidikan Profesi Psikologi,Aktif,Profesi,Terakreditasi Sementara,22,10,0,10,60,62.73,4
+70405,Penyiaran Multimedia,Aktif,D3,Baik,7,4,3,7,280,100.0,2
+35103,Perencanaan Wilayah dan Kota,Aktif,S2,Baik Sekali,6,4,1,5,22,63.67,3
+70404,Periklanan Kreatif,Aktif,D3,Baik,6,4,3,7,289,108.17,2
+12705,Periodonsia,Aktif,Sp-1,Unggul,11,5,0,5,33,63.0,5
+90347,Produksi Media,Aktif,D4,Baik,5,2,3,5,396,139.2,2
+62901,Profesi Akuntan,Aktif,Profesi,Unggul,17,5,0,5,177,70.41,5
+48901,Profesi Apoteker,Aktif,Profesi,Unggul,37,12,0,12,342,69.24,5
+23901,Profesi Arsitek,Aktif,Profesi,B,6,4,2,6,59,69.83,1
+11901,Profesi Dokter,Aktif,Profesi,A,372,21,45,66,699,61.88,0
+12901,Profesi Dokter Gigi,Aktif,Profesi,Unggul,67,17,1,18,346,65.16,5
+12707,Prostodonsia,Aktif,Sp-1,Unggul,24,7,0,7,57,62.38,5
+11724,Psikiatri,Aktif,Sp-1,Unggul,23,5,3,8,61,62.65,5
+73201,Psikologi,Aktif,S1,Unggul,73,43,4,47,1295,77.74,5
+73101,Psikologi,Aktif,S2,A,39,9,0,9,202,65.18,0
+73103,Psikologi Profesi,Aktif,S2,A,26,5,0,5,40,61.54,0
+73104,Psikologi Terapan,Aktif,S2,B,22,5,0,5,88,64.0,1
+11752,Pulmonologi dan Kedokteran Respirasi,Aktif,Sp-1,Unggul,41,8,13,21,121,62.95,5
+11723,Radiologi,Aktif,Sp-1,Unggul,49,3,10,13,101,62.06,5
+11750,Radiologi Kedokteran Gigi,Aktif,Sp-1,Unggul,9,5,0,5,10,61.11,5
+79203,Sastra Arab,Aktif,S1,A,19,6,0,6,257,73.53,0
+79208,Sastra Belanda,Aktif,S1,A,10,8,0,8,234,83.4,0
+79209,Sastra Cina,Aktif,S1,Unggul,10,8,0,8,254,85.4,5
+79216,Sastra Daerah untuk Sastra Jawa,Aktif,S1,Unggul,11,8,0,8,225,80.45,5
+79201,Sastra Indonesia,Aktif,S1,Unggul,15,8,0,8,263,77.53,5
+79202,Sastra Inggris,Aktif,S1,Unggul,15,13,0,13,287,79.13,5
+79204,Sastra Jepang,Aktif,S1,Unggul,11,8,0,8,271,84.64,5
+79206,Sastra Jerman,Aktif,S1,Unggul,10,7,0,7,176,77.6,5
+79205,Sastra Perancis,Aktif,S1,A,7,8,0,8,169,84.14,0
+79207,Sastra Rusia,Aktif,S1,A,13,8,0,8,261,80.08,0
+57201,Sistem Informasi,Aktif,S1,Unggul,26,15,0,15,848,92.62,5
+69201,Sosiologi,Aktif,S1,A,25,14,0,14,316,72.64,0
+69101,Sosiologi,Aktif,S2,Unggul,13,8,0,8,61,64.69,5
+49201,Statistika,Aktif,S1,Unggul,16,6,1,7,307,79.19,5
+11410,Teknik Biomedik,Aktif,S1,Baik Sekali,11,7,1,8,145,73.18,3
+25203,Teknik Bioproses,Aktif,S1,Unggul,30,10,0,10,276,69.2,5
+20201,Teknik Elektro,Aktif,S1,Unggul,52,12,1,13,655,72.6,5
+20101,Teknik Elektro,Aktif,S2,Unggul,32,5,0,5,240,67.5,5
+20001,Teknik Elektro,Aktif,S3,Unggul,20,5,0,5,119,65.95,5
+26101,Teknik Industri,Aktif,S2,Unggul,18,5,0,5,185,70.28,5
+26001,Teknik Industri,Aktif,S3,Unggul,10,5,0,5,40,64.0,5
+26201,Teknik Industri,Aktif,S1,Unggul,23,14,2,16,789,94.3,5
+24001,Teknik Kimia,Aktif,S3,Unggul,3,5,0,5,48,76.0,5
+24201,Teknik Kimia,Aktif,S1,Unggul,39,17,1,18,584,74.97,5
+24101,Teknik Kimia,Aktif,S2,Unggul,40,6,0,6,127,63.17,5
+56201,Teknik Komputer,Aktif,S1,Unggul,19,8,0,8,431,82.68,5
+25002,Teknik Lingkungan,Aktif,S2,Baik Sekali,13,6,0,6,36,62.77,3
+25201,Teknik Lingkungan,Aktif,S1,Unggul,27,9,1,10,429,75.89,5
+21201,Teknik Mesin,Aktif,S1,Unggul,36,15,0,15,569,75.81,5
+21101,Teknik Mesin,Aktif,S2,Unggul,33,6,0,6,121,63.67,5
+21001,Teknik Mesin,Aktif,S3,Unggul,19,6,0,6,78,64.11,5
+27201,Teknik Metalurgi dan Material,Aktif,S1,Unggul,31,11,0,11,597,79.26,5
+27101,Teknik Metalurgi dan Material,Aktif,S2,Unggul,24,6,0,6,44,61.83,5
+27001,Teknik Metalurgi Dan Material,Aktif,S3,Unggul,18,5,0,5,69,63.83,5
+22201,Teknik Sipil,Aktif,S1,Unggul,59,14,3,17,646,70.95,5
+22101,Teknik Sipil,Aktif,S2,Unggul,31,5,1,6,385,72.42,5
+22001,Teknik Sipil,Aktif,S3,Unggul,29,6,0,6,53,61.83,5
+21104,Teknik Sistem Energi,Aktif,S2,Unggul,11,8,0,8,122,71.09,5
+11123,Teknologi Biomedis,Aktif,S2,Unggul,9,5,0,5,16,61.78,5
+55101,Teknologi Informasi,Aktif,S2,Unggul,22,10,1,11,341,75.5,5
+11303,Terapi Okupasi,Aktif,D4,Baik,9,5,2,7,370,101.11,2
+11876,Urologi,Aktif,Sp-2,Baik,1,0,0,0,9,69.0,2
+11713,Urologi,Aktif,Sp-1,Unggul,48,3,8,11,108,62.25,5
