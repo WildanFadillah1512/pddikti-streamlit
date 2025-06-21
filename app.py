@@ -106,7 +106,7 @@ elif page == "🧠 Accreditation Prediction":
     st.pyplot(fig4)
 
     # User input
-    st.subheader("📝 Try Your Own Prediction")
+    st.subheader("📝 Try Predicting Yourself")
 
     user_input = {}
     for feature in features:
