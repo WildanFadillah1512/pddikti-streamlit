@@ -11,39 +11,39 @@ from sklearn.metrics import classification_report, ConfusionMatrixDisplay
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 
-# Page Configuration
-st.set_page_config(page_title="Study Program Accreditation Prediction", layout="centered")
-st.title("🎓 Study Program Accreditation Prediction & Analysis")
+# Page configuration
+st.set_page_config(page_title="PDDIKTI Prediction", layout="wide")
+st.title("🎓 Prediction & Analysis of PDDIKTI Study Programs")
 
-# Sidebar Navigation
+# Sidebar navigation
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Select Page", ["📊 Dataset & Visualization", "🔍 Clustering", "🧠 Accreditation Prediction"])
 
-# Load Dataset
+# Load and clean data
 df = pd.read_csv("dataset_pddikti_bersih.csv")
 df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
 
+# Features and target
 features = ['jumlah_semester', 'jumlah_mk', 'jumlah_sks', 'total_sks', 'mahasiswa_aktif']
 target = 'akreditasi'
 
-# ---------- Dataset & Visualization Page ----------
+# ---------------------- Page 1 -------------------------
 if page == "📊 Dataset & Visualization":
-    st.subheader("📋 Dataset Table")
-    st.dataframe(df, use_container_width=True)
+    st.subheader("📋 PDDIKTI Dataset")
+    st.dataframe(df)
 
     st.subheader("📌 Accreditation Distribution")
-    fig1, ax1 = plt.subplots(figsize=(7, 4))
-    sns.countplot(data=df, x="akreditasi", order=df["akreditasi"].value_counts().index, ax=ax1)
-    ax1.set_title("Accreditation Distribution")
-    plt.xticks(rotation=0)
-    st.pyplot(fig1)
+    fig, ax = plt.subplots()
+    sns.countplot(data=df, x="akreditasi", order=df["akreditasi"].value_counts().index, ax=ax)
+    plt.xticks(rotation=45)
+    st.pyplot(fig)
 
     st.subheader("📈 Feature Correlation")
-    fig2, ax2 = plt.subplots(figsize=(8, 5))
+    fig2, ax2 = plt.subplots()
     sns.heatmap(df[features].corr(), annot=True, cmap="coolwarm", ax=ax2)
     st.pyplot(fig2)
 
-# ---------- Clustering Page ----------
+# ---------------------- Page 2 -------------------------
 elif page == "🔍 Clustering":
     st.subheader("🔍 Study Program Clustering (KMeans)")
 
@@ -62,50 +62,54 @@ elif page == "🔍 Clustering":
     df_cluster["PC1"] = reduced[:, 0]
     df_cluster["PC2"] = reduced[:, 1]
 
-    fig3, ax3 = plt.subplots(figsize=(8, 5))
+    fig3, ax3 = plt.subplots()
     sns.scatterplot(data=df_cluster, x="PC1", y="PC2", hue="cluster", palette="Set2", ax=ax3)
-    ax3.set_title("Study Program Clustering Visualization")
     st.pyplot(fig3)
 
-# ---------- Accreditation Prediction Page ----------
+# ---------------------- Page 3 -------------------------
 elif page == "🧠 Accreditation Prediction":
-    st.subheader("🧠 Study Program Accreditation Prediction")
+    st.subheader("📝 Try Predicting Study Program Accreditation")
 
     if all(col in df.columns for col in features + [target]):
+        # Encode target
         le = LabelEncoder()
         df[target] = le.fit_transform(df[target])
 
+        # Extract features and target
         X = df[features]
         y = df[target]
 
+        # Split data
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
+        # Standardization
         scaler = StandardScaler()
         X_train_scaled = scaler.fit_transform(X_train)
         X_test_scaled = scaler.transform(X_test)
 
+        # Model
         model = RandomForestClassifier(n_estimators=100, random_state=42)
         model.fit(X_train_scaled, y_train)
 
+        # Evaluation
         y_pred = model.predict(X_test_scaled)
         report = classification_report(y_test, y_pred, output_dict=True)
 
         st.write("📊 Random Forest Model Evaluation")
-        st.dataframe(pd.DataFrame(report).transpose(), use_container_width=True)
+        st.dataframe(pd.DataFrame(report).transpose())
 
-        fig_cm, ax_cm = plt.subplots(figsize=(6, 4))
+        fig_cm, ax_cm = plt.subplots()
         ConfusionMatrixDisplay.from_estimator(model, X_test_scaled, y_test, ax=ax_cm)
         st.pyplot(fig_cm)
 
+        # User input
         st.markdown("### 🔧 Enter Data for Prediction")
-        cols = st.columns(2)
         user_input = {}
-        for i, feature in enumerate(features):
-            with cols[i % 2]:
-                user_input[feature] = st.number_input(
-                    f"{feature.replace('_', ' ').title()}",
-                    value=float(df[feature].mean())
-                )
+        for feature in features:
+            user_input[feature] = st.number_input(
+                f"Enter value for {feature.replace('_', ' ').title()}",
+                value=float(df[feature].mean())
+            )
 
         if st.button("Predict Accreditation"):
             input_df = pd.DataFrame([user_input])
@@ -113,5 +117,6 @@ elif page == "🧠 Accreditation Prediction":
             pred = model.predict(input_scaled)[0]
             pred_label = le.inverse_transform([pred])[0]
             st.success(f"✅ Predicted Accreditation: **{pred_label}**")
+
     else:
-        st.error("🚫 Required columns are missing in the dataset.")
+        st.error("🚫 Required columns are not available in the dataset.")
