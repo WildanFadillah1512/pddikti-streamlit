@@ -13,42 +13,28 @@ import seaborn as sns
 # Title
 st.title("🎓 Study Program Prediction & Analysis (PDDIKTI)")
 
-# Load and clean dataset
+# Load and clean data
 df = pd.read_csv("dataset_pddikti_bersih.csv")
 df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
-
-# Rename columns to English
-df.rename(columns={
-    'kode_prodi': 'program_code',
-    'nama_prodi': 'program_name',
-    'status_prodi': 'program_status',
-    'jenjang': 'education_level',
-    'akreditasi': 'accreditation',
-    'jumlah_semester': 'num_semesters',
-    'jumlah_mk': 'num_courses',
-    'jumlah_sks': 'credits_per_course',
-    'total_sks': 'total_credits',
-    'mahasiswa_aktif': 'active_students'
-}, inplace=True)
 
 # Sidebar
 st.sidebar.header("Navigation")
 page = st.sidebar.selectbox("Select Page", ["📊 Dataset & Visualization", "🔍 Clustering", "🧠 Accreditation Prediction"])
 
-# Features and Target
-features = ['num_semesters', 'num_courses', 'credits_per_course', 'total_credits', 'active_students']
-target = 'accreditation'
+# Features and target
+features = ['jumlah_semester', 'jumlah_mk', 'jumlah_sks', 'total_sks', 'mahasiswa_aktif']
+target = 'akreditasi'
 
-# Check for required columns
+# Column validity check
 if not all(col in df.columns for col in features + [target]):
-    st.error("❌ Required columns not found in the dataset.")
+    st.error("❌ Important columns not found in the dataset.")
     st.stop()
 
 # Encode target
 le = LabelEncoder()
 df[target] = le.fit_transform(df[target])
 
-# Standardize
+# Standardization
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(df[features])
 
@@ -61,7 +47,7 @@ if page == "📊 Dataset & Visualization":
 
     st.subheader("📌 Accreditation Distribution")
     fig1, ax1 = plt.subplots()
-    df['accreditation'].value_counts().plot(kind='bar', ax=ax1)
+    df['akreditasi'].value_counts().plot(kind='bar', ax=ax1)
     ax1.set_xlabel("Accreditation (Encoded)")
     ax1.set_ylabel("Count")
     st.pyplot(fig1)
@@ -80,7 +66,7 @@ elif page == "🔍 Clustering":
     kmeans = KMeans(n_clusters=k, random_state=42)
     clusters = kmeans.fit_predict(X_scaled)
 
-    # PCA for 2D visualization
+    # PCA for 2D dimensionality reduction
     pca = PCA(n_components=2)
     X_pca = pca.fit_transform(X_scaled)
     df['cluster'] = clusters
@@ -90,16 +76,16 @@ elif page == "🔍 Clustering":
     ax3.set_title("Clustering Visualization (PCA)")
     st.pyplot(fig3)
 
-    st.write("Data count per cluster:")
+    st.write("Number of data points per cluster:")
     st.write(df['cluster'].value_counts())
 
 # ==========================
 # Page 3: Accreditation Prediction
 # ==========================
 elif page == "🧠 Accreditation Prediction":
-    st.subheader("📌 Predict Study Program Accreditation")
+    st.subheader("📌 Study Program Accreditation Prediction")
 
-    # Train-test split
+    # Data split
     X = df[features]
     y = df[target]
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -124,7 +110,7 @@ elif page == "🧠 Accreditation Prediction":
 
     user_input = {}
     for feature in features:
-        val = st.number_input(f"Enter value for {feature.replace('_', ' ').title()}", value=float(df[feature].mean()))
+        val = st.number_input(f"Enter value for {feature}", value=float(df[feature].mean()))
         user_input[feature] = val
 
     if st.button("Predict Accreditation"):
